@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+
+
+body {
+    margin: 0;
+    
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+/*nav*/
+
+.nav-item {
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.navbar li span {
+    display: inline;
+}
+
+.icons {
+    padding-right: 2px;
+}
+
+.blog {
+    padding-right: 15px;
+}
+
+/*.navbar.scrolled {
+    background: rgb(41, 49, 128) !important;
+}
+
+nav ul li a.scrolled {
+    color: white;
+}*/
+
+nav {
+    background: rgb(254, 255, 248);
+    color: black;
+    box-shadow: 1px 1px 5px rgb(154, 171, 182);
+}
+
+nav ul li a {
+    color: rgb(41, 49, 128);
+    font-family: 'Josefin Sans', sans-serif ;
+    font-weight: bold;
+}
+
+/*search icon*/
+.search-bar {
+    /*border: 2px solid rgb(54, 54, 54);*/
+    display: flex;
+    border-radius: 50px;
+    padding: 5px;
+    height: 40px;
+    color: wheat;
+    background-color:   rgb(204, 211, 212);
+    transition: width 300ms ease-in-out;
+
+}
+
+.search-bar-icon {
+    display: flex;
+    border-radius: 50px;
+    padding: 1px;
+    margin-left: -35px;
+    height: 50px;
+    color: wheat;
+    /*background-color:   rgb(221, 221, 204);*/
+    transition: width 300ms ease-in-out; 
+}
+
+.search-input {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 3px;
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(80, 79, 79);
+    height: 30px;
+    transition: 0.4s all;
+    line-height: 40px;
+    width: 240px;
+   
+}
+
+
+.btn {
+    
+    color: rgb(221, 221, 204);
+    background: rgb(41, 49, 128);
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 6px;
+   
+}
+
+.btn:hover {
+    color: white;
+}
+
+/*.search-bar:hover .search-input {
+    width: 240px;
+    padding: 0 6px;
+}*/
+
+.search-box:hover .btn {
+    background: rgb(238, 238, 231);
+}
+
+.slin {
+    float: right;
+    right: 30px;
+}
+
+/*.dropdown-menu {
+    display: inline-flex;
+}
+
+.dropdown-list {
+    display: inline-flex;
+}*/
+.dropdown-list {
+    left: 100%;
+    top: 0;
+}
+
+
+         /*DashBoard*/
+
+.dashboard {
+    position: absolute;
+    background: white;
+    right: 10px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(131, 130, 130);
+    box-shadow: 1px 1px 5px;
+    height: 350px;
+    width: 250px;
+    margin-top: 160px;
+    display: none;
+    overflow: auto;
+}
+
+
+.db-courses {
+    display: inline-flex;
+    background: rgb(57, 57, 233);
+    margin-left: 10px;
+    width: 200px;
+    margin-top: 40px;
+    height: 40px;
+    border-radius: 5px;
+    align-items: center;
+    color: white;
+    box-shadow: 1px 1px 5px black;
+}
+ 
+.course-names {
+    margin-left: 20px;
+}
+
+.into {
+    font-size: 20px;
+    color: rgb(105, 105, 105);
+    font-weight: bold;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 80px;
+}
+
+
+
+.dashboard img {
+    border-radius: 50%;
+    float: left;
+    margin-left: 10px;
+}
+
+.dashboard p {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.log {
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+.lout {
+    background: white;
+    border: 1px solid rgb(77, 76, 76);
+    padding: 3px;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.dashboard input {
+    border-radius: 3px;
+    border: 1px solid rgb(17, 17, 17);
+    padding: 5px;
+}
+
+.slin-btn {
+    color: rgb(65, 64, 63);
+    background: white;
+}
+
+
+        /*home images*/
+
+.home-pic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-image: url('../vector-3.jpg');
+    height: 800px;
+    width: 1348px;
+    margin-top: -90px;
+}
+
+.rotate:before {
+    content: '';
+    animation: animate infinite 8s;
+    
+}
+
+.home-pic p {
+    font-size: 72px;
+    font-weight: bold;
+    color: rgb(70, 68, 68);
+    font-family: 'sen', sans-serif;
+    padding-top: 220px;
+    padding-left: 250px;
+}
+
+.rotate {
+    width: 50px;
+    font-size: 72px;
+    font-weight: bold;
+    color: rgb(41, 49, 128);
+}
+
+@keyframes animate{
+    0%{
+        content: 'Learn';
+        color: #3cba54;
+    }
+    20%{
+        content: 'Do';
+        color: #f4c20d;
+    }
+    40%{
+        content: 'Get';
+        color: #db3236;
+    }
+    60%{
+        content: 'Gain';
+        color: #4885ed;
+    }
+    80%{
+        content: 'Grab';
+        color: #f4c20d;
+    }
+    100%{
+        content: 'Learn';
+        color: #3cba54;
+    }
+}
+
+/*about*/
+.more-info {
+    padding: 20px;
+    float: right;
+    right: 20px;
+    border: 1px solid rgb(207, 203, 203);
+    box-shadow: 1px 1px 10px ;
+    transition: 0.4s all;
+}
+
+.more-info:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 20px ;
+}
+.about-card {
+    padding: 20px;
+    width: 600px;
+    color: rgb(119, 129, 148);
+}
+
+.container-card {
+    display: inline-flex;
+    margin: 30px;
+}
+
+.more-small {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-stretch: expanded;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.about-h1 {
+    font-size: 42px;
+    color: rgba(19, 19, 53, 0.952);
+    font-weight: 600;
+}
+
+.more-btn {
+    background-color:  rgba(5, 5, 114, 0.952);
+    border-radius: 50px;
+    color: rgb(248, 234, 234);
+    width: 170px;
+    text-align: center;
+    height: 30px;
+}
+
+.more-btn:hover {
+    cursor: pointer;
+}
+
+/*courses */
+
+.courses-card {
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+
+
+
+                           /*courses text */
+                 
+.pic-text {
+    padding-top: 150px;
+    font-size: 30px;
+    color: wheat;
+    font-weight: 700;
+
+}                        
+
+
+
+                       /*arts card */
+
+.arts-card {
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+   width: 250px;
+    color: black;
+}
+
+.arts-card a {
+    text-decoration: none;
+    color: wheat;
+    
+}
+
+.fine-arts {
+    background-color: rgba(5, 5, 114, 0.952);
+    padding: 10px ;
+    border-radius: 50px 0 0 50px;
+    width: 150px;
+    height: 50px;
+}
+
+.arts-btn{
+    background-color: rgba(5, 5, 114, 0.952);
+    padding: 10px ;
+    border-radius: 0 50px 50px 0;
+    width: 150px;
+    height: 50px;
+}
+
+.arts-btn span {
+    color:  rgba(5, 5, 114, 0.952) ;
+}
+
+
+                       /*keep in touch */
+
+.kit {
+    background-color: rgb(20, 17, 17);
+    margin-top: 20px;
+    padding-top: 40px;
+    color: wheat;
+}
+
+.kit ul {
+    padding-top: 20px;
+    list-style: none;
+    display: inline-flex;
+    padding-left: 37%;
+}
+
+.kit ul li {
+    padding-left: 25px;
+    font-size: 28px;
+
+}
+
+.kit ul li a {
+    color: white;
+    transition: 0.3s all;
+}
+
+.kit h3 {
+color:  rgb(86, 128, 119);
+padding-left: 45%;
+}
+
+                       /*social media hover effect*/
+
+.gmail:hover {
+    color: rgb(178, 49, 33);
+}
+
+.fb:hover {
+    color: #3b5998;
+}
+
+.twitter:hover {
+    color: #1DA1F2;
+}
+
+.ig:hover {
+   color: #C13584;
+}
+
+.pinterest:hover {
+    color: #E60023;
+}
+
+.yt:hover {
+    color: #FF0000;
+}
+
+.linkedin:hover {
+    color: #006192;
+}
+
+
+
+
+        /*footer */
+
+footer {
+    background-color: rgb(44, 43, 43);
+    display: inline-flex;
+    width: 100%;
+    text-align: left;
+    font-family: 'noto sans jp', serif ;
+}
+
+footer h3 {
+    color: rgb(86, 128, 119);
+}
+
+.bottom-footer {
+    padding-top: 20px;
+}
+
+.bottom-footer h3 {
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bottom-footer ul {
+    list-style: none;
+    text-align: left;
+    margin-left: -10px;
+}
+
+.bottom-footer ul li {
+    font-size: 14px;
+    color: rgb(117, 115, 115);
+    font-family: 'sen', sans-serif;
+}
+
+.bottom-footer {
+    padding-left: 80px;
+}

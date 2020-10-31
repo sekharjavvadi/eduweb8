@@ -1,0 +1,82 @@
+<div class="container">
+
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               
+              <a class="nav-link ns" href="/index"><span class="icons"><i aria-hidden="true" class="fas fa-home"></i></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                 
+              <a class="nav-link ns" href="/about"><span class="icons"><i aria-hidden="true" class="fas fa-question-circle"></i></span> About</a>
+            </li>
+            <li class="nav-item">
+              
+                <a class="nav-link ns" href="/contact"><span class="icons"> <i aria-hidden="true" class="fas fa-phone"></i></span> Contact</a>
+              </li>
+             <!-- <li class="nav-item">
+               
+                <a class="nav-link ns" href="#courses">Courses</a>
+              </li>-->
+              <!--dropdown-->
+              <li class="nav-item dropdown ns" onmouseout="remove_dropdown();" onmouseover="show_dropdown();">
+                <a class="nav-link dropdown-toggle" href="/courselist" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="icons"> <i aria-hidden="true" class="fab fa-discourse"></i></span>   Courses
+                </a>
+                <div class="dropdown-menu" style="margin-top: 0;" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item dropdown" onmouseout="hide_list();" onmouseover="show_list();" href="#">Design</a>
+                  <div class="dropdown-menu dropdown-list">
+                    <a href="#" class="dropdown-item">Photoshop</a>
+                    <a href="#" class="dropdown-item">3D Designing</a>
+                    <a href="#" class="dropdown-item">Wordpress</a>
+                    <a href="#" class="dropdown-item">UI</a>
+                  </div>
+                  <a class="dropdown-item" href="#">Film Making</a>
+                  <a class="dropdown-item" href="#">Development</a>
+                  <a class="dropdown-item" href="#">Marketing</a>
+                  <a class="dropdown-item" href="#">It & Software</a>
+                  <a class="dropdown-item" href="#">Personal Development</a>
+                  <a class="dropdown-item" href="#">Technology</a>
+                  <a class="dropdown-item" href="#">Business</a>
+                </div>
+              </li>
+
+
+
+
+              <li class="nav-item">
+             
+                <a class="nav-link ns" href="/instructors"><span class="icons"> <i aria-hidden="true" class="fas fa-chalkboard-teacher"></i></span> Instructors</a>
+              </li>
+              <li class="nav-item blog">
+                <a class="nav-link ns" href="/blogs"><span class="icons"><i aria-hidden="true" class="fab fa-blogger-b"></i></span>Blogs</a>
+              </li>
+              
+          </ul>
+<div class="slin">
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item search-bar">
+                <input type="text" class="search-input" placeholder="Enter your search" aria-label="search">
+                 </li>
+              <li class="nav-item search-bar-icon">
+                 <a class="nav-link btn" href="#"><i aria-hidden="true" class="fas fa-search" class="search-bar_submit" aria-label="submit-search"></i></a>
+              </li>
+              <li class="nav-item sup" onclick="show_hide();">
+                <a class="nav-link ns" href="#"><span class="icons"><i aria-hidden="true" class="fas fa-users"></i></span><%= displayname ></a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      </nav>  
+    </div>
+
+
+    <div class="dashboard">
+    <a href="/auth/logout">logout</a>
+    </div>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--header-->
+<%-include('./partials/header'); %>
+<!--Navigation bar-->
+<%- include('./partials/navbar'); %>
+
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap'); 
+
+
+.dashboard {
+  margin-top: -90px;
+}
+
+  h1 {
+      font-size: 52px;
+      margin-top: 150px;
+      margin-left: 10px;
+      font-family: 'josefin sans', sans-serif;
+  }
+
+  .contact2 {
+    display: inline-flex;
+    margin-top: 20px;
+    border: 1px solid rgb(235, 232, 232);
+    font-family: 'josefin sans', sans-serif;
+
+  }
+
+  .contact-1 {
+    margin-top: 20px;
+    margin-left: 40px;
+
+  }
+</style> 
+                      
+<body>
+
+
+
+<!--about-->
+<div class="container">
+<h1>Contact</h1>
+<div class="container contact2">
+  <div class="contact">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7600.027189432386!2d83.2175309!3d17.743998599999998!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1603343604364!5m2!1sen!2sin" width="600px" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<div class="contact-1">
+<b>Address:</b> <p>D-no:-xxx, seethamadhara, visakhapatnam, andhra pradesh, 530027</p><br>
+<b>Phone:</b> <p>xxxxxxxxxxxx</p><br>
+<b>Email:</b> <p>xxxxxxx@email.com</p><br>
+</div>
+
+</div></div>
+
+    <!--get in touch-->
+
+<%- include('./partials/keepintouch'); %>
+
+<!--footer-->
+
+<%- include('./partials/footer'); %>
+    <!--internal scripts-->
+
+<!-- <script>
+  var a = 1 ;
+  function show_hide() {
+    if (a==1) {
+      document.querySelector(".dashboard").style.display = "block";
+      return a = 0;
+    }else {
+      document.querySelector(".dashboard").style.display = "none";
+      return a = 1;
+    }
+  }
+</script> -->
+
+<!-- <script>
+
+  function show_dropdown() {
+      document.querySelector(".dropdown-menu").style.display = "block";
+    }
+    
+    
+    function remove_dropdown() {
+      document.querySelector(".dropdown-menu").style.display = "none";
+    }
+
+    function show_list() {
+      document.querySelector(".dropdown-list").style.display = "block";
+    }
+    
+    
+    function hide_list() {
+      document.querySelector(".dropdown-list").style.display = "none";
+    }
+</script> -->
+
+</body>
+</html>

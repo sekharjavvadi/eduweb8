@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--header-->
+<%- include('./partials/header'); %>
+
+<style>
+
+.dashboard {
+  margin-top: 60px;
+}
+
+.container {
+  margin-left: 120px;
+}
+
+.heading1 {
+  margin-top: 60px;
+}
+
+.topics-btn {
+  position: fixed;
+  text-align: center;
+}
+
+.close-btn:hover {
+  background: rgb(216, 215, 215);
+}
+
+.topics {
+  position: fixed;
+  text-align: left;
+  width: 250px;
+  height: 100%;
+  background: white;
+  box-shadow: 1px 1px 5px black;
+  margin-top: -32px;
+  overflow: auto;
+}
+
+.topics h3 {
+  font-family: 'josefin sans', sans-serif;
+  margin-top: 15px;
+  margin-left: 40px;
+}
+
+.description  {
+  height: 50px;
+  width: 800px;
+  margin-left: 40px;
+ overflow: hidden;
+ text-align: left;
+}
+
+.close-btn {
+  text-align: center;
+  height: 30px;
+  font-size: 16px;
+  margin-top: 15px;
+  background-color: white;
+}
+
+.more {
+  float: left;
+  margin-left: 40px;
+  color: rgb(146, 145, 145);
+  font-size: 16PX;
+  font-weight: 600;
+  background: rgb(255, 255, 255);
+  padding-top: 5px;
+  height: 30px;
+}
+
+.t-list {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'josefin sans', sans-serif;
+  color: rgb(97, 98, 99);
+  margin-top: -10px;
+  transition: all 0.3s;
+}
+
+.t-list:hover {
+   cursor: pointer;
+   background: white;
+   margin-left: 3px;
+   width: 100%;
+   color: rgb(12, 12, 112);
+
+}
+
+.more:hover {
+  cursor: pointer;
+}
+.coursetitle{
+  text-transform: uppercase;
+  color: rgb(37, 37, 73);
+}
+
+</style>
+
+
+<body>
+
+
+                   <!--navigation-->
+
+<%- include('./partials/navbar'); %>
+
+
+                              <!--topics section-->
+
+<div class="topics-page">
+<p class="topics-btn">Get Topics</p>
+<div class="topics">
+  <p class="close-btn">X</p>
+    <h3>Topics</h3><hr>
+    <ul >
+      <% for(var i=0; i<vtopics.length; i++) {%>
+        <a href="#<%=i%>"> <li class="t-list"><%= vtopics[i] %></li></a>
+      <% } %>
+      </ul>
+
+</div>
+
+
+
+<div class="container">
+<div class="videos">
+  <!-- <% if(!validd==true) {%>
+    <div class="alert-warning">
+      <strong>Warning!</strong><a href="/auth/googlee">please login/signup</a> 
+    </div>
+  <% } %> -->
+  <h1 class="coursetitle"><u><%= coursetitle %></u></h1>
+     
+  <%  for(var i=0;i<vlinks.length; i++){%>
+   <a href="" id="<%=i%>"></a>
+   <% if(!validd==true) { %> 
+   <% if(i==5){ %>
+    <div class="alert-warning">
+      <strong>Warning!</strong><a href="/auth/googlee"> Please login/signup to get more videos</a> 
+    </div>
+ <%  } %>
+ <%  } %>
+    <h3 class="heading1"><%=vtopics[i]%></h3>
+      <br>
+      <iframe width="900px" height="500px" 
+      <% if (i>4){ %>
+        <% if(validd==true){ %>
+          src= "<%=vlinks[i]%>" 
+       <% } %>      
+     <% } else { %>
+      src= "<%=vlinks[i]%>" 
+
+     <% } %>
+     
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="description">  <p><%= vdescription[i] %></p></div>
+    <div class="more" onclick="show_more();"><p>SHOW MORE</p></div>
+  <%  }%>
+
+</div>
+</div>
+</div>
+     <!--get in touch-->
+
+<%- include('./partials/keepintouch'); %>
+
+
+
+
+
+
+
+
+<!--footer-->
+<%- include('./partials/footer'); %>
+
+    <!--internal scripts
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="jquery.counterup.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="script.js"></script>
+<script>
+  jQuery(document).ready(function( $ ) {
+    $('.counter').counterUp({
+    delay: 10,
+    time: 1000
+});
+});
+</script>
+<script>
+  $(window).scroll(function() {
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 800);
+  });
+</script>-->
+
+
+
+<script>
+
+var button = document.querySelector(".topics-btn");
+var topicBar = document.querySelector(".topics");
+var closeBtn = document.querySelector(".close-btn");
+
+button.addEventListener("click", function() {
+     topicBar.style.display = "block";
+});
+
+closeBtn.addEventListener("click", function() {
+  topicBar.style.display = "none";
+});
+
+</script>
+<script>
+  var a = 1 ;
+  function show_hide() {
+    if (a==1) {
+      document.querySelector(".dashboard").style.display = "block";
+      return a = 0;
+    }else {
+      document.querySelector(".dashboard").style.display = "none";
+      return a = 1;
+    }
+  }
+
+  function show_more() {
+    if (a==1) {
+      document.querySelector(".description").style.height = "auto";
+      document.querySelector(".more").innerHTML = "SHOW LESS";
+      return a = 0;
+    }else {
+      document.querySelector(".description").style.height = "50px";
+      document.querySelector(".more").innerHTML = "SHOW MORE";
+      return a = 1;
+    }
+  }
+</script>
+<script>
+
+  function show_dropdown() {
+      document.querySelector(".dropdown-menu").style.display = "block";
+    }
+    
+    
+    function remove_dropdown() {
+      document.querySelector(".dropdown-menu").style.display = "none";
+    }
+
+    function show_list() {
+      document.querySelector(".dropdown-list").style.display = "block";
+    }
+    
+    
+    function hide_list() {
+      document.querySelector(".dropdown-list").style.display = "none";
+    }
+
+    
+</script>
+</body>
+</html>

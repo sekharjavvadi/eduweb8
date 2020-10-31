@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--header-->
+<%-include('./partials/header'); %>
+
+<style>
+  h1 {
+      font-size: 52px;
+      margin-top: 150px;
+
+  }
+</style>
+<body>
+
+                      <!--Navigation bar-->
+<%- include('./partials/navbar'); %>
+
+<!--about-->
+
+<h1>instructors</h1>
+
+    <!--get in touch-->
+
+<%- include('./partials/keepintouch'); %>
+
+<!--footer-->
+
+<%- include('./partials/footer'); %>
+    <!--internal scripts-->
+
+<script>
+  var a = 1 ;
+  function show_hide() {
+    if (a==1) {
+      document.querySelector(".dashboard").style.display = "block";
+      return a = 0;
+    }else {
+      document.querySelector(".dashboard").style.display = "none";
+      return a = 1;
+    }
+  }
+</script>
+
+<script>
+
+  function show_dropdown() {
+      document.querySelector(".dropdown-menu").style.display = "block";
+    }
+    
+    
+    function remove_dropdown() {
+      document.querySelector(".dropdown-menu").style.display = "none";
+    }
+
+    function show_list() {
+      document.querySelector(".dropdown-list").style.display = "block";
+    }
+    
+    
+    function hide_list() {
+      document.querySelector(".dropdown-list").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
